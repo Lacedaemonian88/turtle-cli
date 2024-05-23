@@ -81,14 +81,17 @@ class Turtle
     puts "\n"
 
     warrior_turt = rand(1..20)
+
+    ## add loop -- until either success, or fail
     if warrior_turt >= 15
       puts "Holy Mackerel! This turtle unleashed its hidden potential and knocked the Dragon Turtle out"
     elsif warrior_turt == 1
-      puts  "Ouch. This turtle tripped and landed on it's back. The Dragon Turtle sympathetically helps flip them over." 
-      puts  "They awkwardly nod to eachother, and wander away."
+      puts  "Ouch. The warrior turtle tripped and landed on it's back. The Dragon Turtle sympathetically helps flip them over." 
+      puts  "They both awkwardly nod to eachother, and wander away. Pretending this encounter never happened."
     else
-      puts "This turtle tries to chomp, but misses."
-      puts "The Dragon Turtle is not amused, easily knocking the smaller turtle overboard."
+      puts "The warrior turtle lunges forward for a chomp, but misses."
+      puts "The Dragon Turtle counters, easily swatting the warrior away"
+      puts "The warrior turtle climbs back up..."
     end
   end
 
