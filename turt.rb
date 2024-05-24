@@ -9,7 +9,7 @@ class Turtle
         "not everything that weighs you down is yours to carry",
         "storms don't last forever",
         "the impossible can always be broken down into possibilities",
-        "fear is what stops you. Courage is what keeps you going"
+        "fear is what stops you, courage is what keeps you going"
     ]
     end
 
@@ -63,7 +63,7 @@ class Turtle
     smol_turt = rand(1..20)
 
     if player_turt == smol_turt
-      puts "It's a tie!"
+      puts "It's a tie! #{turt} and their friend celebrate 🐢 🐢"
     elsif player_turt > smol_turt
       puts  "#{turt} won!"
     else
