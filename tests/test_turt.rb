@@ -3,13 +3,13 @@ require_relative '../turt'
 
 class TestTurtle < Minitest::Test
 def test_gives_wisdom
-  wisdom = Guidance.new
-  assert wisdom.ask ("words of wisdom")
+  guidance = Turtle.new
+  assert guidance.ask ("words of wisdom")
   end
 end
 
-class Guidance 
-  def ask wisdom
+class Turtle
+  def ask guidance
     "words of wisdom"
   end
 end
