@@ -4,6 +4,13 @@ class Turtle
     def initialize
       @name = name
       @turt = turt
+      @wisdom = [
+        "Avoiding failure is to avoid progress", 
+        "Not everything that weighs you down is yours to carry",
+        "Storms don't last forever",
+        "The impossible can always be broken down into possibilities",
+        "Fear is what stops you. Courage is what keeps you going"
+    ]
     end
 
   def welcome
@@ -35,10 +42,10 @@ class Turtle
       when 3
         combat
       when 4
-        wisdom
+        guidance
       when 5
         puts 'The World Turtle looks back and nods at you,'
-        pp "Take care, #{@name}."
+        pp "Take care, #{@name}. Remember #{@wisdom.sample}"
         break
       else
         puts 'These turtles looks confused. Please choose a valid option.'
@@ -93,17 +100,9 @@ class Turtle
   end
 
   #wisdom
-  def wisdom
-    turt_wisdom = [
-    "Avoiding failure is to avoid progress", 
-    "Not everything that weighs you down is yours to carry",
-    "Storms don't last forever",
-    "The impossible can always be broken down into possibilities",
-    "Fear is what stops you. Courage is what keeps you going"
-  ].sample
-    guidance = turt_wisdom
+  def guidance
     puts "\n"
     puts "Amongst the sea of the cosmos The World Turtle acknowledges you, offering some words of wisdom:"
-    pp "#{guidance}."
+    pp "#{@wisdom.sample}."
   end
 end
