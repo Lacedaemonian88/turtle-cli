@@ -3,18 +3,16 @@ class Turtle
 
     def initialize
       @name = name
-      @wisdom = wisdom
       @turt = turt
     end
 
   def welcome
-    @wisdom = []
     puts "\n"
     puts "You're on the back of the World Turtle, surrounded by much smaller turtles."
     puts 'They ask you for your name: '
     self.name = gets.chomp.capitalize
     puts "\n"
-    puts "Well #{@name}... you have no idea why you're here, but these turtles want to play!"
+    puts "Well #{@name}... you have no idea how or why you're here, but these turtles want to play!"
     adventure
   end
 
@@ -39,8 +37,8 @@ class Turtle
       when 4
         wisdom
       when 5
-        puts 'The World Turtle looks back, nods at you, and says,'
-        pp "Take care #{@name}. Always remember...#{wisdom}..."
+        puts 'The World Turtle looks back and nods at you,'
+        pp "Take care, #{@name}."
         break
       else
         puts 'These turtles looks confused. Please choose a valid option.'
@@ -77,30 +75,35 @@ class Turtle
   #dragon turtle dnd 
   def combat
     puts "\n"
-    puts "A Dragon Turtle suddenly appears. One the turtles steps up, ready for combat!"
+    puts "A Dragon Turtle suddenly appears. A rugged looking turtle steps forwards, ready for combat!"
     puts "\n"
 
     warrior_turt = rand(1..20)
 
-    ## add loop -- until either success, or fail
     if warrior_turt >= 15
-      puts "Holy Mackerel! This turtle unleashed its hidden potential and knocked the Dragon Turtle out"
+      puts "Holy Mackerel! This turtle unleashed its hidden potential and knocked the Dragon Turtle out!"
     elsif warrior_turt == 1
       puts  "Ouch. The warrior turtle tripped and landed on it's back. The Dragon Turtle sympathetically helps flip them over." 
-      puts  "They both awkwardly nod to eachother, and wander away. Pretending this encounter never happened."
+      puts  "They both awkwardly nod to each other and wander away, pretending this encounter never happened."
     else
       puts "The warrior turtle lunges forward for a chomp, but misses."
-      puts "The Dragon Turtle counters, easily swatting the warrior away"
-      puts "The warrior turtle climbs back up..."
+      puts "The Dragon Turtle counters, easily knocking this turtle overboard."
+      puts "The warrior turtle climbs back up... and wanders away to eat."
     end
   end
 
   #wisdom
   def wisdom
-    turt_wisdom = []
-
+    turt_wisdom = [
+    "Avoiding failure is to avoid progress", 
+    "Not everything that weighs you down is yours to carry",
+    "Storms don't last forever",
+    "The impossible can always be broken down into possibilities",
+    "Fear is what stops you. Courage is what keeps you going"
+  ].sample
+    guidance = turt_wisdom
+    puts "\n"
+    puts "Amongst the sea of the cosmos The World Turtle acknowledges you, offering some words of wisdom:"
+    pp "#{guidance}."
   end
-   
-
-    
 end
