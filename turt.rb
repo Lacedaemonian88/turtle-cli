@@ -5,11 +5,11 @@ class Turtle
       @name = name
       @turt = turt
       @wisdom = [
-        "Avoiding failure is to avoid progress", 
-        "Not everything that weighs you down is yours to carry",
-        "Storms don't last forever",
-        "The impossible can always be broken down into possibilities",
-        "Fear is what stops you. Courage is what keeps you going"
+        "avoiding failure is to avoid progress", 
+        "not everything that weighs you down is yours to carry",
+        "storms don't last forever",
+        "the impossible can always be broken down into possibilities",
+        "fear is what stops you. Courage is what keeps you going"
     ]
     end
 
@@ -76,6 +76,9 @@ class Turtle
     puts "The turtles nod and know what to do... afterall, the universe is just turtles all the way down."
     puts "They slowly climb ontop one another's shells."
     puts "\n"
+    puts "🐢"
+    puts "🐢"
+    puts "🐢"
     puts "You are now enlightened"  
   end
 
@@ -103,6 +106,6 @@ class Turtle
   def guidance
     puts "\n"
     puts "Amongst the sea of the cosmos The World Turtle acknowledges you, offering some words of wisdom:"
-    pp "#{@wisdom.sample}."
+    pp "#{@wisdom.sample.capitalize}."
   end
 end
